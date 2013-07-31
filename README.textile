@@ -3,8 +3,8 @@ h1. mrq_twituser
 ; Summary
 : Replaces all apparant twitter usernames with links back to twitter.
 ; Version
-: 0.0.2 (31 July 2013)
+: 0.0.3 (31 July 2013)
 
 h1. This is still a massive work in progress.
 
-It doesn't actually work _yet_.
+It doesn't actually work _yet_.  Code roughly based on "pax_grep":https://github.com/johnstephens/pax_grep by "John Stevens":http://designop.us/
