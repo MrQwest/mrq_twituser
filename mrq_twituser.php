@@ -37,7 +37,7 @@ h1. mrq_twituser
 ; Summary
 : Replaces all apparant twitter usernames with links back to twitter.
 ; Version
-: 0.0.1 (31 July 2013)
+: 0.0.2 (31 July 2013)
 
 # --- END PLUGIN HELP ---
 
@@ -56,8 +56,9 @@ h1. mrq_twituser
 
 function mrq_twituser($thing) {
     global $pretext;
-    
-    return preg_replace('/(^|\s)@([a-z0-9_]+)/i','$1<a href="http://www.twitter.com/$2">@$2</a>',parse($thing));
+    $from = '/(^|\s)@([a-z0-9_]+)/i';
+    $to = '$1<a href="http://www.twitter.com/$2">@$2</a>';
+    return preg_replace($from,$to,parse($thing));
 }
 
 # --- END PLUGIN CODE ---
