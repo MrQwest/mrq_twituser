@@ -1,9 +1,10 @@
 h1. mrq_twituser
 
-; Summary
-: Replaces all apparant twitter usernames with links back to twitter.
-; Version
-: 0.0.3 (31 July 2013)
+h2.Summary
+
+A "Textpattern":http://textpattern.com plugin, it replaces all apparant twitter usernames with links back to twitter. For example, @mrqwest will be parsed into "@mrqwest":http://twitter.com/mrqwest
+
+*Version:*: 0.0.3 (31 July 2013)
 
 h1. This is still a massive work in progress.
 
