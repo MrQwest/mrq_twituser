@@ -1,20 +1,12 @@
 <?php
 
-// This is a PLUGIN TEMPLATE.
-
-// Copy this file to a new name like abc_myplugin.php.  Edit the code, then
-// run this file at the command line to produce a plugin for distribution:
-// $ php abc_myplugin.php > abc_myplugin-0.1.txt
-
-// Plugin name is optional.  If unset, it will be extracted from the current
-// file name. Uncomment and edit this line to override:
 $plugin['name'] = 'mrq_twituser';
 
 // 0 = Plugin help is in Textile format, no raw HTML allowed (default).
 // 1 = Plugin help is in raw HTML.  Not recommended.
-# $plugin['allow_html_help'] = 1;
+# $plugin['allow_html_help'] = 0;
 
-$plugin['version'] = '0.0.1';
+$plugin['version'] = '0.0.4';
 $plugin['author'] = 'MrQwest';
 $plugin['author_uri'] = 'http://mrqwest.co.uk/';
 $plugin['description'] = 'Replaces all apparant twitter usernames with links back to twitter.';
@@ -37,7 +29,7 @@ h1. mrq_twituser
 ; Summary
 : Replaces all apparant twitter usernames with links back to twitter.
 ; Version
-: 0.0.2 (31 July 2013)
+: 0.0.4 (4th Aug 2014)
 
 # --- END PLUGIN HELP ---
 
@@ -49,7 +41,7 @@ h1. mrq_twituser
 
 /**
  * This is mrq_twituser: A plugin for Textpattern
- * version 0.0.1
+ * version 0.0.4
  * by MrQwest, adapted from pax_grep by John Stephens which is adapted from rah_replace by Jukka Svahn
  * http://mrqwest.co.uk/
  */
@@ -58,7 +50,7 @@ function mrq_twituser($thing) {
     global $pretext;
     $from = '/(^|\s)@([a-z0-9_]+)/i';
     $to = '$1<a href="http://www.twitter.com/$2">@$2</a>';
-    return preg_replace($from,$to,parse($thing));
+    return preg_replace($from,$to,$thing);
 }
 
 # --- END PLUGIN CODE ---
